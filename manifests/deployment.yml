@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: srilakshpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: srilakshpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: srilakshpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: srilakshpipelinesjavascriptdocker 
+          image: mycontainerregistry113.azurecr.io/srilakshpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
